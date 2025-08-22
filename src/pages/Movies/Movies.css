@@ -1,0 +1,28 @@
+
+/* .movies-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* موبايل */
+  /* gap: 20px;
+} */
+/* 
+@media (min-width: 600px) {
+  .movies-grid {
+    grid-template-columns: repeat(2, 1fr); /* تابلت */
+  /* }
+} */ 
+/* تمنع أي سكرول يمين/شمال */
+html, body {
+  overflow-x: hidden;
+}
+
+@media (min-width: 900px) {
+  .movies-grid {
+    grid-template-columns: repeat(3, 1fr); /* لابتوب */
+  }
+}
+
+@media (min-width: 1200px) {
+  .movies-grid {
+    grid-template-columns: repeat(4, 1fr); /* شاشات كبيرة */
+  }
+}

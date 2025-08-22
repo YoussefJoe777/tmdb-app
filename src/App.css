@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* تمنع أي سكرول يمين/شمال */
+html, body {
+  overflow-x: hidden;
+}
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;

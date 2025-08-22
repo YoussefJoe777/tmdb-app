@@ -1,0 +1,82 @@
+📍 Timeline
+
+الأسبوع 1
+
+إعداد المشروع + GitHub + Navbar + Routing
+
+الأسبوع 2
+
+Home Page + Movies Page + Movie Details
+
+الأسبوع 3
+
+Actors Page + Actor Details
+
+TV Shows Page + TV Show Details
+
+الأسبوع 4
+
+Genres + Search + Pagination/Infinite Scroll
+
+تحسين الـ UI + Responsive Design
+
+الأسبوع 5
+
+Testing + Error handling
+
+رفع على GitHub + نشر على Vercel
+
+
+pagination أو infinite scroll.
+
+Movies.jsx
+
+عرض قائمة أفلام حسب الفئة (popular / top rated / upcoming).
+
+استخدام MovieCard.
+
+MovieDetails.jsx
+
+تفاصيل الفيلم (overview, runtime, language, cast, crew, trailer, similar movies).
+
+📍 المرحلة 4 – الممثلين
+
+Actors.jsx
+
+عرض قائمة الممثلين (popular).
+
+كل ممثل بـ ActorCard.
+
+ActorDetails.jsx
+
+معلومات الممثل (bio, birthday, imdb link, أعماله).
+
+📍 المرحلة 5 – المسلسلات
+
+TVShows.jsx
+
+نفس Movies لكن للمسلسلات.
+
+TVShowDetails.jsx
+
+نفس MovieDetails لكن للمسلسلات.
+
+📍 المرحلة 6 – الإضافات
+
+ صفحة Genres (يعرض أفلام/مسلسلات حسب التصنيف).
+
+ البحث (search across movies, tv, actors).
+
+ تحسين الـ UI بالـ Tailwind.
+
+ إضافة Pagination أو Infinite Scroll في الصفحات الطويلة.
+
+📍 المرحلة 7 – اللمسات الأخيرة
+
+ Loading states + Error handling.
+
+ Responsive design (موبايل/تابلت/ديسكتوب).
+
+ رفع الكود على GitHub.
+
+ نشر المشروع (مثلاً على Vercel أو Netlify).

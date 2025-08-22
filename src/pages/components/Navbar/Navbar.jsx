@@ -67,7 +67,7 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className="fixed top-0 left-0 w-full bg-gray-900 shadow-md z-50"
+      className="fixed top-0 left-0 w-full bg-[rgba(17,24,39,0.7)] shadow-md z-50"
     >
       <div className="flex items-center justify-between px-6 py-3.5">
         {/* Logo */}
