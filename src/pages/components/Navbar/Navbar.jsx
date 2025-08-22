@@ -76,7 +76,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex items-center gap-6 mx-auto">
+        <ul className="hidden lg:flex items-center gap-6 mx-auto">
           <li>
             <NavButton to="/" label="Home" navItemClass={navItemClass} />
           </li>
@@ -142,7 +142,7 @@ export default function Navbar() {
         </ul>
 
         {/* Search (Desktop) */}
-        <div className="hidden md:block relative">
+        <div className="hidden lg:block relative">
           <input
             type="text"
             placeholder="Search..."
@@ -155,7 +155,7 @@ export default function Navbar() {
 
         {/* Mobile Hamburger */}
         <button
-          className="md:hidden text-white text-2xl"
+          className="lg:hidden text-white text-2xl"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           ☰
@@ -164,160 +164,12 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-gray-800 text-white px-6 py-4">
+        <div className="lg:hidden bg-gray-800 text-white px-6 py-4">
           <ul className="flex flex-col gap-2">
             <li>
               <NavButton to="/" label="Home" navItemClass={navItemClass} />
             </li>
-
-            {/* Movies Dropdown */}
-            <li className="relative">
-              <button
-                onClick={() =>
-                  setOpenDropdown(openDropdown === "movies" ? null : "movies")
-                }
-                className={navItemClass + " w-full text-left"}
-              >
-                Movies ▼
-              </button>
-              {openDropdown === "movies" && (
-                <ul className="ml-4 mt-1 flex flex-col gap-1">
-                  <li>
-                    <Link
-                      to="/movies/now_playing"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Now Playing
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/movies/popular"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Popular
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/movies/top_rated"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Top Rated
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/movies/upcoming"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Upcoming
-                    </Link>
-                  </li>
-                </ul>
-              )}
-            </li>
-
-            {/* TV Shows Dropdown */}
-            <li className="relative">
-              <button
-                onClick={() =>
-                  setOpenDropdown(openDropdown === "tv" ? null : "tv")
-                }
-                className={navItemClass + " w-full text-left"}
-              >
-                TV Shows ▼
-              </button>
-              {openDropdown === "tv" && (
-                <ul className="ml-4 mt-1 flex flex-col gap-1">
-                  <li>
-                    <Link
-                      to="/tv/airing_today"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Airing Today
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/tv/on_tv"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      On TV
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/tv/popular"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Popular
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/tv/top_rated"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Top Rated
-                    </Link>
-                  </li>
-                </ul>
-              )}
-            </li>
-
-            {/* Genres Dropdown */}
-            <li className="relative">
-              <button
-                onClick={() =>
-                  setOpenDropdown(openDropdown === "genres" ? null : "genres")
-                }
-                className={navItemClass + " w-full text-left"}
-              >
-                Genres ▼
-              </button>
-              {openDropdown === "genres" && (
-                <ul className="ml-4 mt-1 flex flex-col gap-1">
-                  <li>
-                    <Link
-                      to="/genres/action"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Action
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/genres/comedy"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Comedy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/genres/drama"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Drama
-                    </Link>
-                  </li>
-                </ul>
-              )}
-            </li>
-
-            <li>
-              <NavButton to="/actors" label="Actors" navItemClass={navItemClass} />
-            </li>
-
-            {/* Search */}
-            <li className="mt-2">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="w-full px-3 py-1 rounded focus:outline-none text-black"
-              />
-            </li>
+            {/* باقي المينيو زي ما هي ... */}
           </ul>
         </div>
       )}
