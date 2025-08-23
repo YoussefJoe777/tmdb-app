@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./Movies.css";
 
 const Movies = () => {
@@ -9,6 +9,8 @@ const Movies = () => {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
+  const navigate = useNavigate();
+
 
   const fetchMovies = async (pageNum, categoryType) => {
     if (!hasMore) return;
@@ -99,17 +101,23 @@ const Movies = () => {
         }}
       >
         {movies.map((movie) => (
-          <div
-            key={movie.id}
-            style={{
-              textAlign: "center",
-              background: "#222",
-              borderRadius: "12px",
-              padding: "10px",
-              color: "#fff",
-              overflow: "hidden",
-            }}
-          >
+        <div
+          key={movie.id}
+          onClick={() => navigate(`/movie/${movie.id}`)}
+          style={{
+            textAlign: "center",
+            background: "#222",
+            borderRadius: "12px",
+            padding: "10px",
+            color: "#fff",
+            overflow: "hidden",
+            cursor: "pointer", // يخلي المستخدم يعرف إنه clickable
+            transition: "transform 0.2s",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.03)")}
+          onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+        >
+
             <img
               src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               alt={movie.title}
@@ -139,7 +147,10 @@ const Movies = () => {
 
             {movie.overview && movie.overview.length > 100 && (
               <button
-                onClick={() => toggleExpand(movie.id)}
+                onClick={(e) => {
+                  e.stopPropagation(); // يمنع فتح صفحة التفاصيل
+                  toggleExpand(movie.id);
+                }}
                 style={{
                   marginTop: "8px",
                   background: "transparent",
