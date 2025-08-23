@@ -36,9 +36,9 @@ const Home = () => {
   };
 
   const handleCardClick = (item) => {
-    const type = item.media_type === "tv" ? "tv" : "movie"; // يفرق بين فيلم/مسلسل
-    navigate(`/details/${type}/${item.id}`);
-  };
+    // const type = item.media_type === "tv" ? "tv" : "movie"; // يفرق بين فيلم/مسلسل
+    navigate(`/movie/${item.id}`); // يفتح MovieDetails بشكل صحيح
+};
 
   return (
     <div
